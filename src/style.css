@@ -1,0 +1,15 @@
+body {
+    
+}
+
+h1 {
+    text-align: center;
+    box-sizing: content-box;
+    background-image: url("https://webadictos.com/media/2015/03/Proteccion-de-datos.jpg");
+    background-size: auto;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em 2em 3em 4em;
+    margin: 0em 0em 0em 0em;
+    color: black;        
+}
