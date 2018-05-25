@@ -9,11 +9,34 @@
     <h1>Caesar Cipher</h1>
     <hr>
     <p id="user"></p>
-    <p>Ingrese el texto:</p>
-    <div id="addText"></div>
-    <div id="deliverText"></div>
+
+    <hr>
+    
+    <div class="cifrado">CIFRADO
+      <p>Ingrese el texto:</p>
+      <input id="inputC" type="text" autofocus>
+      <p>Selecciona la posición de desplazamiento:</p>
+      <input type="number" min="1" id="offset">
+      <button id="botonC">Cifrar</button>
+      <p>Resultado:</p>
+      <input id="resultado"> 
+    </div>
+    
+    <hr class="v">
+    
+    <div class="descifrado">DESCIFRADO
+      <p>Ingrese el texto:</p>
+      <input type="text" id="inputD">
+      <p>Selecciona la posición de desplazamiento:</p>
+      <input type="number" min="1" id="offset">
+      <button id="botonD">Decifrar</button>
+      <p>Resultado:</p>
+      <input id="resultado"> 
+    </div>
+    
     <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
+

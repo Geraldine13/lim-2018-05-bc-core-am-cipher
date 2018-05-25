@@ -1,10 +1,12 @@
 body {
-    
+    background: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     text-align: center;
-    box-sizing: content-box;
+    box-sizing: content-box;    
     background-image: url("https://webadictos.com/media/2015/03/Proteccion-de-datos.jpg");
     background-size: auto;
     background-position: center;
@@ -12,4 +14,41 @@ h1 {
     padding: 1em 2em 3em 4em;
     margin: 0em 0em 0em 0em;
     color: black;        
+}   
+
+.cifrado {
+    /* background-color: blue; */
+    width: 49%;
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+}
+
+.descifrado {
+    /* background-color: brown; */
+    width: 49%;
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+}
+
+.v {
+    width: 1px;
+    height: 300px;
+    display: inline-block;
+}
+
+#inputC {
+    width: 250px;
+    height: 80px;
+}
+
+#inputD {
+    width: 250px;
+    height: 80px;
+}
+
+#resultado {
+    width: 250px;
+    height: 80px;
 }
