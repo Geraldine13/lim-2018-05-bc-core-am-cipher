@@ -1,9 +1,9 @@
-//alert("Bienvenido a la app de Cifrado");
+alert("Bienvenido a la app de Cifrado");
 
 // Ingreso de usuario
-//var name = prompt("Ingresa tu nombre");
-//var userName = document.getElementById("user");
-//userName.textContent = "Bienvenid@ " + name.toUpperCase();
+var name = prompt("Ingresa tu nombre");
+var userName = document.getElementById("user");
+userName.textContent = "Bienvenid@ " + name.toUpperCase();
 
 
 // Declarando variable para el ingreso del texto
@@ -13,7 +13,7 @@ phrase = phrase.toUpperCase();
 console.log(phrase);
 
 // Declarando variable para el offset nro de espacios
-var spaces = parseInt(document.getElementById('offset').value);
+var spaces = parseInt(document.getElementById('offsetC').value);
 
 // Función para el cifrado
 function cypher (phrase, spaces) {
@@ -39,14 +39,16 @@ function cypher (phrase, spaces) {
     }
      return answer;
 }
-   
+
+// Variable y función para ejecutar el botón Cifrar
 var boton = document.getElementById('botonC');
 
 function result() {
     var phrase = document.getElementById('inputC').value;
-    var spaces = parseInt(document.getElementById('offset').value);
+    var spaces = parseInt(document.getElementById('offsetC').value);
     //boton = alert('Boton funciona');
-    document.getElementById('resultado').value = (cypher(phrase, spaces));
+    document.getElementById('resultadoC').value = (cypher(phrase, spaces));
 }
 
 boton.addEventListener("click", result);
+
