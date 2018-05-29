@@ -7,18 +7,19 @@ userName.textContent = "Bienvenid@ " + name.toUpperCase();
 
 
 // Declarando variable para el ingreso del texto
-var phrase = document.getElementById('inputC').value;
+var phrase = document.getElementById('input').value;
 
+//Convirtiendo a mayúsculas el texto ingresado
 phrase = phrase.toUpperCase();
 console.log(phrase);
 
 // Declarando variable para el offset nro de espacios
-var spaces = parseInt(document.getElementById('offsetC').value);
+var spaces = parseInt(document.getElementById('offset').value);
 
 // Función para el cifrado
-function cypher (phrase, spaces) {
+function cipher (phrase, spaces) {
 
-    var answer = "";
+    var answer = "";       // Variable para la respuesta
     var initialASCII = 0;  // Código ASCII del texto ingresado
     var lastASCII = 0;     // Nuevo código ASCII 
    
@@ -41,14 +42,52 @@ function cypher (phrase, spaces) {
 }
 
 // Variable y función para ejecutar el botón Cifrar
-var boton = document.getElementById('botonC');
+var botonCipher = document.getElementById('botonC');
 
-function result() {
-    var phrase = document.getElementById('inputC').value;
-    var spaces = parseInt(document.getElementById('offsetC').value);
+// Declarando la variable para mostrar los resultados
+var showResults = document.getElementById('resultado');
+
+function resultCipher() {
+    var phrase = document.getElementById('input').value;
+    var spaces = parseInt(document.getElementById('offset').value);
     //boton = alert('Boton funciona');
-    document.getElementById('resultadoC').value = (cypher(phrase, spaces));
+    showResults.innerHTML = (cipher(phrase, spaces));
+}
+botonCipher.addEventListener("click", resultCipher);
+
+
+// Función para descifrar
+function decipher (phrase, spaces) {
+
+    var answer = "";
+    var antASCII = 0;  // Código ASCII del texto ingresado
+    var initialASCII = 0;     // Nuevo código ASCII 
+   
+   // Ciclo para todo el texto ingresado
+    for (var n = 0; n < phrase.length; n++) {
+   
+       if (phrase[n].charCodeAt() != 32) {
+   
+          antASCII = phrase[n].charCodeAt();
+          initialASCII = (antASCII - 90 - spaces) % 26 + 90;
+          var a = String.fromCharCode(initialASCII);
+          answer = answer.concat(a);
+   
+       } else {
+   
+          answer = answer + " ";
+       }
+    }
+     return answer;
 }
 
-boton.addEventListener("click", result);
+// Variable y función para ejecutar el botón Cifrar
+var botonDecipher = document.getElementById('botonD');
 
+function resultDecipher() {
+    var phrase = document.getElementById('input').value;
+    var spaces = parseInt(document.getElementById('offset').value);
+    //boton = alert('Boton funciona');
+    showResults.innerHTML = (decipher(phrase, spaces));
+}
+botonDecipher.addEventListener("click", resultDecipher);

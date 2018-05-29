@@ -16,34 +16,16 @@ h1 {
     color: black;        
 }   
 
-.cifrado {
+.formulario {
     /* background-color: blue; */
-    width: 49%;
+    width: 100%;
     display: inline-block;
     align-content: center;
     text-align: center;
+
 }
 
-.descifrado {
-    /* background-color: brown; */
-    width: 49%;
-    display: inline-block;
-    align-content: center;
-    text-align: center;
-}
-
-.v {
-    width: 1px;
-    height: 300px;
-    display: inline-block;
-}
-
-#inputC {
-    width: 250px;
-    height: 80px;
-}
-
-#inputD {
+#input {
     width: 250px;
     height: 80px;
 }

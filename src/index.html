@@ -12,29 +12,22 @@
 
     <hr>
     
-    <div class="cifrado">CIFRADO
+    <div class="formulario">
+      
       <p>Ingrese el texto:</p>
-      <input id="inputC" type="text" autofocus>
-      <p>Selecciona la posición de desplazamiento:</p>
-      <input type="number" min="1" id="offsetC">
+      <input id="input" type="text" autofocus>
+      <p>Ingresa la posición de desplazamiento:</p>
+      <input type="number" min="1" id="offset">
       <button id="botonC">Cifrar</button>
-      <p>Resultado:</p>
-      <input id="resultadoC" class="resultado"> 
-    </div>
-    
-    <hr class="v">
-    
-    <div class="descifrado">DESCIFRADO
-      <p>Ingrese el texto:</p>
-      <input type="text" id="inputD">
-      <p>Selecciona la posición de desplazamiento:</p>
-      <input type="number" min="1" id="offsetD">
       <button id="botonD">Descifrar</button>
-      <p>Resultado:</p>
-      <input id="resultadoD" class="resultado"> 
+      <hr>
+      <div id="root">
+          <h3>Resultados:</h3>
+          <p id="resultado"></p>
+      </div>
+ 
     </div>
     
-    <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
