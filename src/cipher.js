@@ -51,8 +51,11 @@ decode : (offset, string) => {
             return answer;
         },
 
+
 // Función para el botón del resultado del encode
 resultCipher : () => {
+          // Declarando la variable para mostrar los resultados
+          let showResults = document.getElementById('resultado');
           let string = document.getElementById('input').value;
           let offset = parseInt(document.getElementById('offset').value);
           showResults.innerHTML = (cipher.encode(offset, string));
@@ -60,9 +63,11 @@ resultCipher : () => {
 
 // Función para el botón del resultado del decode
 resultDecipher : () => {
-    let string = document.getElementById('input').value;
-    let offset = parseInt(document.getElementById('offset').value);
-    showResults.innerHTML = (cipher.decode(offset, string));
+          // Declarando la variable para mostrar los resultados
+          let showResults = document.getElementById('resultado');
+          let string = document.getElementById('input').value;
+          let offset = parseInt(document.getElementById('offset').value);
+          showResults.innerHTML = (cipher.decode(offset, string));
   },
         
 
