@@ -18,8 +18,7 @@ encode : (offset, string) => {
               answer = answer.concat(a);
  
             } else {
- 
-              answer = answer + " ";
+               answer = answer + " ";
             }
           }
             return answer;
@@ -43,38 +42,26 @@ decode : (offset, string) => {
               let a = String.fromCharCode(initialASCII);
               answer = answer.concat(a);
  
-            } else {
- 
+            } else { 
               answer = answer + " ";
             }
-          }
-            return answer;
+          } 
+          return answer;
         },
 
 
-// Función para el botón del resultado del encode
-resultCipher : () => {
-          // Declarando la variable para mostrar los resultados
-          let showResults = document.getElementById('resultado');
-          let string = document.getElementById('input').value;
-          let offset = parseInt(document.getElementById('offset').value);
-          showResults.innerHTML = (cipher.encode(offset, string));
-  },
+createCipherWithOffset : (offset) => {
 
-// Función para el botón del resultado del decode
-resultDecipher : () => {
-          // Declarando la variable para mostrar los resultados
-          let showResults = document.getElementById('resultado');
-          let string = document.getElementById('input').value;
-          let offset = parseInt(document.getElementById('offset').value);
-          showResults.innerHTML = (cipher.decode(offset, string));
-  },
-        
+  
+  let object = {
+    encode : (string) => {
+      return cipher.encode(offset, string);
+    },
 
-
-
-
-
-
+    decode : (string) => {
+      return cipher.decode(offset, string);
+    }
+  }
+  return object;
 }
-
+};

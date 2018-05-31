@@ -11,7 +11,7 @@ describe('cipher', () => {
     });
 
     it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33', () => {
-      assert.equal(cipher.encode(33, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 'HIJKLMNOPQRSTUVWXYZABCDEFG');
+      assert.equal(cipher.encode(33, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ '), 'HIJKLMNOPQRSTUVWXYZABCDEFG ');
 
     });
   
@@ -29,22 +29,29 @@ describe('cipher', () => {
     });
 
     it('debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "HIJKLMNOPQRSTUVWXYZABCDEFG" con offest 33', () => {
-      assert.equal(cipher.decode(33, 'HIJKLMNOPQRSTUVWXYZABCDEFG'), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+      assert.equal(cipher.decode(33, 'HIJKLMNOPQRSTUVWXYZABCDEFG '), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ');
     });
-      
-    //it('debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offest 90', () => {
-    //  assert.equal(cipher.decode(33, 'HIJKLMNOPQRSTUVWXYZABCDEFG'), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
-    //});
+  });  
+});
+
+describe('cipher.createCipherWithOffset', () => {
+
+  it('debería ser una función', () => {
+    assert.equal(typeof cipher.createCipherWithOffset, 'function');
   });
 
-  /*describe('cipher.createCipherWithOffset', () => {
 
-    it('debería ser una función', () => {
-      assert.equal(typeof cipher.createCipherWithOffset, 'function');
-    });
+  it('debería retornar un objeto con dos funciones (encode y decode) con offset fijado', () => {
+    assert.isObject(cipher.createCipherWithOffset(33));
+    assert.isFunction(cipher.createCipherWithOffset(33).encode);
+    assert.isFunction(cipher.createCipherWithOffset(33).decode);
+  });
 
-    it('debería retornar un objeto con dos funciones (encode y decode) con offset fijado');
+  it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33', () => {
+    assert.equal(cipher.createCipherWithOffset(33).encode('ABCDEFGHIJKLMNOPQRSTUVWXYZ '), 'HIJKLMNOPQRSTUVWXYZABCDEFG ');
+  });
 
-  });*/
-
+  it('debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "HIJKLMNOPQRSTUVWXYZABCDEFG" con offest 33', () => {
+    assert.equal(cipher.createCipherWithOffset(33).decode('HIJKLMNOPQRSTUVWXYZABCDEFG '), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ');
+  });
 });
