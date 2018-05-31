@@ -24,7 +24,6 @@ encode : (offset, string) => {
             return answer;
         },
 
-
 // Función para descifrar
 decode : (offset, string) => {
 
@@ -49,10 +48,9 @@ decode : (offset, string) => {
           return answer;
         },
 
-
+// Función adicional con offset fijo
 createCipherWithOffset : (offset) => {
-
-  
+ 
   let object = {
     encode : (string) => {
       return cipher.encode(offset, string);
