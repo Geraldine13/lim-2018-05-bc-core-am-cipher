@@ -11,7 +11,7 @@ function resultCipher() {
     let string = document.getElementById('input').value;
     let offset = parseInt(document.getElementById('offset').value);
     showResults.innerHTML = ((cipher.createCipherWithOffset(offset)).encode(string));
-};
+}
 
 botonCipher.addEventListener("click", resultCipher);
 
@@ -21,6 +21,6 @@ function resultDecipher() {
     let string = document.getElementById('input').value;
     let offset = parseInt(document.getElementById('offset').value);
     showResults.innerHTML = ((cipher.createCipherWithOffset(offset)).decode(string));
-};
+}
 
 botonDecipher.addEventListener("click", resultDecipher);
