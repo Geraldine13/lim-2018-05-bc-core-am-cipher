@@ -1,35 +1,55 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado César</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Caesar Cipher</h1>
-    <hr>
-    <p id="user"></p>
-
-    <hr>
-    
-    <div class="formulario">
-      
-      <p>Ingrese el texto:</p>
-      <input id="input" type="text" autofocus>
-      <p>Ingresa la posición de desplazamiento:</p>
-      <input type="number" min="1" id="offset">
-      <button id="botonC">Cifrar</button>
-      <button id="botonD">Descifrar</button>
-      <hr>
-      <div id="root">
-          <h3>Resultados:</h3>
-          <p id="resultado"></p>
+    <header>
+      <h1>App de Cifrado César</h1>
+      <hr>  
+    </header>
+    <section>
+      <div class="contenedorPrincipal">    
+      <div class="introducción">
+        <h3>Instrucciones</h3>
+        <p id="cesar">Estimados amigos, el cifrado César fue creado por el emperador Julio César, quién lo usaba para enviar órdenes a sus generales en los campos de batalla y lo emplearemos 😉 para la coordinación de la fiesta 🎉, con los siguientes pasos:<br>
+        <br>1. Ingresarán el mensaje.
+        <br>2. Elijirán el nro, que iniciará el cálculo del cifrado.
+        <br>3. Click en el botón Cifrar.
+        <br>4. Copiar el mensaje cifrado y enviarlo de la siguiente forma:<br>"(nro elejido)mensaje cifrado"<br>
+        <br>Ejemplo: Mensaje "HOLA AMIGOS" con la posición 7<br>
+        <br><strong style="color:cyan">"(7)OVSH HTPNVZ"</strong><br>
+        <br>Para el Descifrado, ingresarán el mensaje cifrado y el nro de posiciòn indicado y luego click en Descifrar.<br>
+        <br>
+        Más sobre <a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank">Cifrado César</a>
+        <br>
+        <br>
+        <img src="http://www.jc-mouse.net/wp-content/uploads/2014/09/cifradocesar.gif">  
+        </p>
+      </div>                
+    </section>
+    <section>
+      <div class="contenedor">  
+        <p id="form">Ingresa el mensaje:</p>
+        <textarea rows="3" id="input" placeholder="Escribe aquí" autofocus></textarea>
+        <p id="form">Posición de desplazamiento:</p>
+        <input type="number" min="1" id="offset" placeholder="Ingresa un nro">
+            
+        <button id="botonC">CIFRAR</button>
+        <br>
+        <button id="botonD">DESCIFRAR</button>
+        <hr>
+        <h3><u>Resultados:</u></h3>
+        <p id="resultado"></p>
       </div>
- 
+    </section>
     </div>
-    
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
+
 

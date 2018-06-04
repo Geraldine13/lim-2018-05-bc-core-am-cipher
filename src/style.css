@@ -1,36 +1,117 @@
 body {
-    background: black;
     color: white;
+    background-image: url("https://images.vexels.com/media/users/3/69749/raw/97ea911301b97aa9b1cef301a98e861b-resumen-fondo-met-lico-checker-con-sombra.jpg");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     text-align: center;
     box-sizing: content-box;    
-    background-image: url("https://webadictos.com/media/2015/03/Proteccion-de-datos.jpg");
     background-size: auto;
     background-position: center;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 1em 2em 3em 4em;
-    margin: 0em 0em 0em 0em;
-    color: black;        
-}   
+    color: white;  
+    text-decoration: underline;      
+}
 
-.formulario {
-    /* background-color: blue; */
+a {
+    color: yellow;
+}
+
+.introducción {
+    width: 30%;
+    height: 525px;
+    margin: 0em 0em 0em 15em;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 7px;
+    justify-content: center;   
+    text-align: justify; 
+    font-size: 14px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.contenedor {
+    width: 30%;
+    height: 525px;
+    margin: 0em 15em 0em 0em;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    justify-content: center;   
+    text-align: justify;
+    font-size: 14px;
+    float: right;
+}
+
+#cesar {
+    width: 100%
+}
+
+#offset {
+    width: 50%;
+}
+
+#form {
+    font-size: 17px;
+    color: white;
+}
+
+img {
+    width: 50%;
+    padding: 0px 80px;     
+}
+
+input, textarea {
     width: 100%;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 7px;
     display: inline-block;
-    align-content: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border-radius: 7px;
+    color: white;
+    background: navy;
+    font-weight: 600px;
+    border: 2px solid blue;
     text-align: center;
-
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#input {
-    width: 250px;
-    height: 80px;
+button:hover {
+    cursor: pointer;
+    background-color: cyan;
+    color: black;
+    font-size: 20px;
+    font: bold;
 }
 
-.resultado {
-    width: 250px;
-    height: 80px;
+#resultado {
+    width: 100%;
+    height: 100px;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin: 0em 0em 3.5em 0em;
 }
