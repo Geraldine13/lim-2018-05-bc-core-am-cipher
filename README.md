@@ -1,9 +1,5 @@
 # Cifrado César
 
-## Introducción 
-
-
-
 ## Información del Sistema de Cifrado
 
 El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los
